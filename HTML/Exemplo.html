@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Exemplo autoScriptCJS">
+        <meta name="generator" content="Visual Code Studio">
+
+        <title>Exemplo autoScriptCJS</title>
+
+        <link href="../CSS/bootstrap.min.css" rel="stylesheet">
+        <link href="../CSS/autoScriptCJS.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <div class="panel panel-default">
+
+            <div class="script">
+                                     
+                <section>
+                                                          
+                    Olá <span id="nome"></span>, <span class="saudacao"></span>
+                
+                    <br><br>
+                                                              
+                    Inserir o script
+                                                              
+                    <br><br>
+                
+                    Atenciosamente.
+
+                    <br><br>
+                                                              
+                    Institucional<br>
+                    Equipe<br>
+                    email@exemplo.com.br
+                
+                    <button class="copied" title="Clique Aqui para copiar o script">
+                
+                        <img src="http://bookviavarejo.atento.net/bookviavarejo/e_arq_comum/1/arquivos/copiar.svg">
+                
+                    </button>                                               
+                                                               
+                </section>
+
+                <br><br>
+
+                <section>
+                                                          
+                    Olá <span class="nome"></span>, <span class="saudacao"></span>
+                
+                    <br><br>
+                                                              
+                    Inserir o script
+                                                              
+                    <br><br>
+                
+                    Atenciosamente.
+                                                              
+                    <br><br>
+                                                              
+                    Institucional<br>
+                    Equipe<br>
+                    email@exemplo.com.br
+                
+                    <button class="copied" title="Clique Aqui para copiar o script">
+                
+                        <img src="../Images/copiar.svg">
+                
+                    </button>                                               
+                                                               
+                </section>
+                                                          
+            </div>
+
+        </div>
+
+        <script src="../JS/jquery.3.4.1.js" type="text/javascript"></script>
+        <script src="../JS/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../JS/autoScriptCJS.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            var horario, cliente, replica, d, hour, r;
+            
+                horario = document.querySelectorAll('.saudacao');
+                cliente = document.getElementById('nome');
+                replica = document.querySelectorAll('.nome');
+                d = new Date();
+                hour = d.getHours();
+                      
+            horario.forEach((x) => {
+                if( hour < 12 ) x.innerHTML = 'bom dia!';
+                else 
+                    if( hour >= 12 && hour < 18 ) x.innerHTML = 'boa tarde!';
+                else
+                    if( hour >= 18 && hour < 24 ) x.innerHTML = 'boa noite!';
+            });
+                        
+            if(nome == null){
+                var nome = prompt('Qual o nome do cliente?');  
+                cliente.innerText = nome;
+            } 
+                        
+            for( var r = 0; r < replica.length; r++ ){
+                replica[r].innerText = cliente.innerText;
+            }
+        </script>
+
+    </body>
+
+</html>

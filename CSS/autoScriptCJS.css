@@ -1,0 +1,41 @@
+/*
+    Script desenvolvido por Rafael de Moraes
+    Objetivo: Trazer um modo interativo que não permita erros gramáticais nos momentos 
+    que a operação necessite utilizar a função copy/paste para encaminhar e-mails aos clientes.
+    Contato Pessoal: rafat93.rdm@outlook.com.br
+    Contato Corporativo: rafael.tiburcio@atento.com.br
+    Ramal: 0*21 52216
+
+    Necessita de JQuery para utilização
+*/
+.copied{
+    outline: none;
+    background: none;
+    transition: 1s all;
+    border: none;
+    float: right;
+}
+.copied:hover{
+    transform: scale(1.2, 1.2)
+}
+.copied img{
+    width: 40px;
+    height: 40px;
+}
+.script{
+     border: 0.5px solid lightgray;
+     border-radius: 10px;
+     padding: 20px;
+     background-color: #dbdbdb;
+     transition: 0.3s ease;
+}
+.script:hover{
+   background-color:#e6e3e3;
+}
+.autoContent{
+    border: 0.5px solid gray;
+    border-radius: 10px;
+    color: red;
+    background-color:white;
+    padding: 0px 8px 0px 8px;
+}
